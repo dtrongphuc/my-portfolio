@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import theme from '../../constaints/theme';
 import avatar from '../../assets/images/avatar.jpg';
+import { data } from '../../store/data';
+
 const Image = styled.img`
 	display: block;
 	border-radius: 50%;
@@ -36,7 +39,7 @@ function Profile() {
 					<Image className='avatar' src={avatar} alt='avatar' />
 				</Link>
 			</Cover>
-			<Name>Duong Trong Phuc</Name>
+			<Name>{data?.name}</Name>
 		</>
 	);
 }
