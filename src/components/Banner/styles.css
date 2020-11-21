@@ -1,0 +1,41 @@
+.typed-cursor {
+	font-size: 3.4rem;
+	color: #fff;
+	opacity: 1;
+	font-weight: 600;
+	line-height: 3.4rem;
+}
+
+.typed-cursor--blink {
+	animation: blink 0.7s infinite;
+	-webkit-animation: blink 0.7s infinite;
+	animation: blink 0.7s infinite;
+}
+@keyframes blink {
+	50% {
+		opacity: 0;
+	}
+}
+@-webkit-keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

@@ -40,7 +40,6 @@ const getColOffsetString = (offset) => {
 };
 
 export const Col = styled.div`
-	background-color: crimson;
 	// Extra small devices (portrait phones, less than 576px)
 	flex-basis: 100%;
 	flex-grow: 1;

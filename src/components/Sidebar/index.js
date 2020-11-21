@@ -3,22 +3,30 @@ import styled from 'styled-components';
 
 import theme from '../../constaints/theme';
 import Profile from './Profile';
-import NavItem from './NavItem';
-import Socical from './Socical';
+import Navigation from '../Navigation';
+import Socical from '../Socical';
 
-const Container = styled.nav`
-	display: block;
-	position: absolute;
+const SidebarContainer = styled.nav`
+	display: none;
+	position: fixed;
 	top: 0;
 	left: 0;
 	bottom: 0;
 	height: 100%;
 	width: 260px;
-	background-color: ${theme.sidebarBg};
+	background-color: ${theme.dark};
+	visibility: hidden;
+	z-index: 100;
+
+	@media (min-width: 992px) {
+		display: block;
+		visibility: visible;
+	}
 `;
 
-const NavList = styled.div`
+const NavWrapper = styled.nav`
 	margin-top: 40px;
+	text-align: center;
 `;
 
 const Footer = styled.div`
@@ -30,20 +38,15 @@ const Footer = styled.div`
 
 function Sidebar() {
 	return (
-		<Container>
+		<SidebarContainer>
 			<Profile />
-			<NavList>
-				<NavItem href='home' content='Home' />
-				<NavItem href='about' content='About Me' />
-				<NavItem href='services' content='What I Do' />
-				<NavItem href='resume' content='Resume' />
-				<NavItem href='portfolio' content='Portfolio' />
-				<NavItem href='contact' content='Contact' />
-			</NavList>
+			<NavWrapper>
+				<Navigation seperate={false} />
+			</NavWrapper>
 			<Footer>
 				<Socical />
 			</Footer>
-		</Container>
+		</SidebarContainer>
 	);
 }
 

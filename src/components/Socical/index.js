@@ -6,7 +6,7 @@ import { faFacebookF, faGithub } from '@fortawesome/free-brands-svg-icons';
 import theme from '../../constaints/theme';
 import { data } from '../../store/data';
 
-const Container = styled.div`
+const SocicalContainer = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -17,7 +17,7 @@ const SocicalItem = styled.a`
 	position: relative;
 	margin: 0 0.8rem;
 	font-size: 0.9rem;
-	color: ${theme.white};
+	color: ${theme.whiteSemiLight};
 	opacity: 1;
 	text-decoration: none;
 	cursor: pointer;
@@ -42,7 +42,8 @@ const IconToolTip = styled.span`
 	width: fit-content;
 	padding: 0 8px;
 	line-height: 1.4rem;
-	top: -34px;
+	${({ tooltipPos }) =>
+		tooltipPos && tooltipPos === 'top' ? 'top: -34px' : 'bottom: -34px'};
 	left: 50%;
 	transform: translateX(-50%);
 	border-radius: 4px;
@@ -52,7 +53,10 @@ const IconToolTip = styled.span`
 		content: '';
 		display: block;
 		position: absolute;
-		bottom: -6px;
+		${({ tooltipPos }) =>
+			tooltipPos && tooltipPos === 'top'
+				? 'bottom: -6px;'
+				: 'top: -6px;'};
 		left: 50%;
 		transform: translateX(-50%);
 		width: 0;
@@ -60,7 +64,10 @@ const IconToolTip = styled.span`
 		border-left: 6px solid transparent;
 		border-right: 6px solid transparent;
 
-		border-top: 6px solid rgba(0, 0, 0, 0.8);
+		${({ tooltipPos }) =>
+			tooltipPos && tooltipPos === 'top'
+				? 'border-top: 6px solid rgba(0, 0, 0, 0.8)'
+				: 'border-bottom: 6px solid rgba(0, 0, 0, 0.8)'};
 
 		color: ${theme.white};
 	}
@@ -68,7 +75,7 @@ const IconToolTip = styled.span`
 
 function Socical() {
 	return (
-		<Container>
+		<SocicalContainer>
 			<SocicalItem color='#1877F2' href={data?.facebook} target='_blank'>
 				<IconToolTip className='tooltip'>Facebook</IconToolTip>
 				<FontAwesomeIcon icon={faFacebookF} />
@@ -77,7 +84,7 @@ function Socical() {
 				<IconToolTip className='tooltip'>Github</IconToolTip>
 				<FontAwesomeIcon icon={faGithub} />
 			</SocicalItem>
-		</Container>
+		</SocicalContainer>
 	);
 }
 

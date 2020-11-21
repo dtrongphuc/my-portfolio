@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyle = createGlobalStyle`
     html {
         box-sizing: border-box;
+        height: 100%;
     }
 
     *,
@@ -14,6 +15,7 @@ const GlobalStyle = createGlobalStyle`
     body {
         font-family: 'Poppins', sans-serif;
         font-smooth: auto;
+        height: 100%;
     }
 
     h1,
@@ -21,7 +23,8 @@ const GlobalStyle = createGlobalStyle`
     h3,
     h4,
     h5,
-    h6 {
+    h6,
+    p {
         margin: 0;
         padding: 0;
     }
