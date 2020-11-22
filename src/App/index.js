@@ -1,22 +1,18 @@
-import React, { Suspense, useEffect } from 'react';
+import React, { Suspense, useEffect, lazy } from 'react';
 import styled from 'styled-components';
 
 import Loader from '../components/Loader';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-const Sidebar = React.lazy(() => import('../components/Sidebar'));
-const Banner = React.lazy(() => import('../components/Banner'));
-const Header = React.lazy(() => import('../components/Header'));
+const Sidebar = lazy(() => import('../components/Sidebar'));
+const Header = lazy(() => import('../components/Header'));
+const Home = lazy(() => import('../pages/Home'));
 
 const Container = styled.div`
 	position: relative;
 	@media (min-width: 992px) {
 		margin-left: 260px;
 	}
-`;
-
-const Home = styled.section`
-	position: relative;
 `;
 
 function App() {
@@ -28,12 +24,10 @@ function App() {
 
 	return (
 		<Suspense fallback={<Loader />} data-aos='zoom-in'>
-			<Header />
 			<Container>
+				<Header />
 				<Sidebar />
-				<Home>
-					<Banner />
-				</Home>
+				<Home />
 			</Container>
 		</Suspense>
 	);

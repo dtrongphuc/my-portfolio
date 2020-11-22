@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Typed from 'typed.js';
 
 import theme from '../../constaints/theme';
-import banner from '../../assets/images/banner.jpg';
+import banner from '../../assets/images/banner.webp';
 import { ButtonLink } from '../../styled.global';
 import ChevronDown from '../ChevronDown';
 import { Container, Row, Col } from '../../layouts/GridSystem';
