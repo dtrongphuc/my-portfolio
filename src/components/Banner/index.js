@@ -64,6 +64,8 @@ const TextLight = styled.p`
 const TypedWrap = styled.div`
 	display: block;
 	text-align: center;
+	width: 100%;
+	word-wrap: break-word;
 	margin: 3rem 0;
 `;
 
@@ -71,7 +73,7 @@ const TypedText = styled(Text)`
 	font-size: 3rem;
 	line-height: 3rem;
 	font-weight: 600;
-	display: inline-block;
+	display: inline;
 	text-align: center;
 `;
 
