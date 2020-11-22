@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { Suspense, useEffect } from 'react';
 import styled from 'styled-components';
 
-import Sidebar from '../components/Sidebar';
-import Banner from '../components/Banner';
-import Header from '../components/Header';
+import Loader from '../components/Loader';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+const Sidebar = React.lazy(() => import('../components/Sidebar'));
+const Banner = React.lazy(() => import('../components/Banner'));
+const Header = React.lazy(() => import('../components/Header'));
 
 const Container = styled.div`
 	position: relative;
@@ -17,8 +20,14 @@ const Home = styled.section`
 `;
 
 function App() {
+	useEffect(() => {
+		AOS.init({
+			duration: 400,
+		});
+	}, []);
+
 	return (
-		<>
+		<Suspense fallback={<Loader />} data-aos='zoom-in'>
 			<Header />
 			<Container>
 				<Sidebar />
@@ -26,7 +35,7 @@ function App() {
 					<Banner />
 				</Home>
 			</Container>
-		</>
+		</Suspense>
 	);
 }
 
