@@ -4,6 +4,8 @@ import Typed from 'typed.js';
 
 import theme from '../../constaints/theme';
 import banner from '../../assets/images/banner.jpg';
+import { ButtonLink } from '../../styled.global';
+import ChevronDown from '../ChevronDown';
 import { Container, Row, Col } from '../../layouts/GridSystem';
 import './styles.css';
 
@@ -13,7 +15,7 @@ const BannerContainer = styled.div`
 `;
 
 const Mask = styled.div`
-	background-color: rgba(17, 20, 24, 0.6);
+	background-color: rgba(17, 20, 24, 0.7);
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -62,12 +64,13 @@ const TextLight = styled.p`
 const TypedWrap = styled.div`
 	display: block;
 	text-align: center;
-	margin: 4rem 0;
+	margin: 3rem 0;
 `;
 
 const TypedText = styled(Text)`
-	font-size: 2.8rem;
-	line-height: 2.8rem;
+	font-size: 3rem;
+	line-height: 3rem;
+	font-weight: 600;
 	display: inline-block;
 	text-align: center;
 `;
@@ -77,6 +80,19 @@ const ContentContainer = styled(Container)`
 	height: 100%;
 	z-index: 99;
 	margin: auto;
+`;
+
+const DivWrapper = styled.div`
+	text-align: center;
+	margin-top: 2rem;
+`;
+
+const BtnLinkHover = styled(ButtonLink)`
+	&:hover {
+		background-color: ${theme.primary};
+		color: ${theme.white};
+		transition: all 0.3s linear;
+	}
 `;
 
 function Banner() {
@@ -120,9 +136,21 @@ function Banner() {
 								based in TP.Ho Chi Minh, Viet Nam.
 							</TextLight>
 						</Col>
+						<Col>
+							<DivWrapper>
+								<BtnLinkHover
+									color={theme.primary}
+									bgColor={'transparent'}
+									bColor={theme.primary}
+								>
+									Hire Me
+								</BtnLinkHover>
+							</DivWrapper>
+						</Col>
 					</Row>
 				</ContentContainer>
 			</Content>
+			<ChevronDown />
 		</BannerContainer>
 	);
 }

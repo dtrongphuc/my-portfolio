@@ -5,7 +5,7 @@ import theme from '../../constaints/theme';
 
 const Link = styled.a`
 	display: block;
-	color: ${({ active }) => (active ? theme.primary : theme.white)};
+	color: ${({ active }) => (active ? theme.primary : theme.whiteSemiLight)};
 	font-size: 1rem;
 	padding: 0.9rem 0;
 	border-bottom: ${({ seperate }) =>
