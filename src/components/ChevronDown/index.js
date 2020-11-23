@@ -38,11 +38,13 @@ const Wrapper = styled.div`
 function ChevronDown() {
 	return (
 		<Wrapper>
-			<FontAwesomeIcon
-				icon={faChevronDown}
-				color='#fff'
-				className='chevronDown'
-			/>
+			<a href='/#about'>
+				<FontAwesomeIcon
+					icon={faChevronDown}
+					color='#fff'
+					className='chevronDown'
+				/>
+			</a>
 		</Wrapper>
 	);
 }

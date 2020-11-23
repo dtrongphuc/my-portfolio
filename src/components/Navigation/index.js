@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import SmoothScroll from 'smooth-scroll';
 
 import NavItem from './NavItem';
 
@@ -20,6 +21,12 @@ function Navigation({ seperate }) {
 
 		document.querySelectorAll('section[id]').forEach((section) => {
 			observer.observe(section);
+		});
+
+		new SmoothScroll('a[href*="#"]', {
+			speed: 800,
+			speedAsDuration: true,
+			easing: 'easeInOutQuad',
 		});
 	}, []);
 
