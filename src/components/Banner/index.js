@@ -4,7 +4,7 @@ import Typed from 'typed.js';
 
 import theme from '../../constaints/theme';
 import banner from '../../assets/images/banner.webp';
-import { ButtonLink } from '../../styled.global';
+import { ButtonLink, Section } from '../../styled.global';
 import ChevronDown from '../ChevronDown';
 import { Container, Row, Col } from '../../layouts/GridSystem';
 import './styles.css';
@@ -38,12 +38,10 @@ const Background = styled.div`
 	z-index: -1;
 `;
 
-const Content = styled.div`
+const Content = styled(Section)`
 	display: flex;
 	min-width: 100%;
 	min-height: 100vh;
-	padding: 4.5rem 1rem;
-	overflow: hidden;
 `;
 
 const Text = styled.p`

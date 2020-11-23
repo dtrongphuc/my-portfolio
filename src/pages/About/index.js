@@ -1,12 +1,13 @@
 import React from 'react';
 
 import SectionTitle from '../../components/SectionTitle';
+import { Section } from '../../styled.global';
 
 function About() {
 	return (
-		<div style={{ height: '100px', marginTop: '40px' }}>
+		<Section id='about'>
 			<SectionTitle fuzzy='about me'>Know me more</SectionTitle>
-		</div>
+		</Section>
 	);
 }
 

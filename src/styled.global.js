@@ -51,4 +51,10 @@ export const ButtonLink = styled.a`
 	text-decoration: none;
 `;
 
+export const Section = styled.section`
+	position: relative;
+	padding: 4.5rem 0;
+	overflow: hidden;
+`;
+
 export default GlobalStyle;

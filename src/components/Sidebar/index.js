@@ -44,7 +44,7 @@ function Sidebar() {
 				<Navigation seperate={false} />
 			</NavWrapper>
 			<Footer>
-				<Socical />
+				<Socical tooltipPos='top' />
 			</Footer>
 		</SidebarContainer>
 	);

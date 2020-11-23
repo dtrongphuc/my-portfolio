@@ -73,15 +73,19 @@ const IconToolTip = styled.span`
 	}
 `;
 
-function Socical() {
+function Socical({ tooltipPos }) {
 	return (
 		<SocicalContainer>
 			<SocicalItem color='#1877F2' href={data?.facebook} target='_blank'>
-				<IconToolTip className='tooltip'>Facebook</IconToolTip>
+				<IconToolTip className='tooltip' tooltipPos={tooltipPos}>
+					Facebook
+				</IconToolTip>
 				<FontAwesomeIcon icon={faFacebookF} />
 			</SocicalItem>
 			<SocicalItem href={data?.github} target='_blank'>
-				<IconToolTip className='tooltip'>Github</IconToolTip>
+				<IconToolTip className='tooltip' tooltipPos={tooltipPos}>
+					Github
+				</IconToolTip>
 				<FontAwesomeIcon icon={faGithub} />
 			</SocicalItem>
 		</SocicalContainer>
