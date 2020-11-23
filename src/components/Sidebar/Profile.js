@@ -22,6 +22,8 @@ const Link = styled.a`
 const Cover = styled.span`
 	display: block;
 	padding: 2rem 2rem 1rem 2rem;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
 `;
 
 const Name = styled.h3`

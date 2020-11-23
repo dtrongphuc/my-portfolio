@@ -8,11 +8,13 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.p`
+	display: block;
+	width: 100%;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	color: ${theme.dark};
+	color: ${theme.title};
 	font-size: 2.25rem;
 	font-weight: 600;
 	line-height: 2.25rem;
@@ -34,7 +36,7 @@ const Title = styled.p`
 
 const Fuzzy = styled.p`
 	width: 100%;
-	font-size: calc(1.4rem + 8.2vw);
+	font-size: calc(1.85rem + 8.4vw);
 	color: rgba(240, 240, 240, 0.9);
 	font-weight: 600;
 	line-height: 1.3;

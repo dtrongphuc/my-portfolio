@@ -29,6 +29,13 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
     }
+
+    ul,
+    li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
 `;
 
 export const ButtonLink = styled.a`

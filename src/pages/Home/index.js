@@ -9,7 +9,7 @@ const Wrapper = styled.section`
 
 function Home() {
 	return (
-		<Wrapper>
+		<Wrapper id='home'>
 			<Banner />
 		</Wrapper>
 	);
