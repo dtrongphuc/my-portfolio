@@ -22,6 +22,8 @@ const down = keyframes`
 
 const Wrapper = styled.div`
 	vertical-align: top;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
 	.chevronDown {
 		font-size: 1.6rem;
 		height: 120px;

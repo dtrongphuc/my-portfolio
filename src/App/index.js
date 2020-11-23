@@ -7,6 +7,7 @@ import 'aos/dist/aos.css';
 const Sidebar = lazy(() => import('../components/Sidebar'));
 const Header = lazy(() => import('../components/Header'));
 const Home = lazy(() => import('../pages/Home'));
+const About = lazy(() => import('../pages/About'));
 
 const Container = styled.div`
 	position: relative;
@@ -28,6 +29,7 @@ function App() {
 				<Header />
 				<Sidebar />
 				<Home />
+				<About />
 			</Container>
 		</Suspense>
 	);
