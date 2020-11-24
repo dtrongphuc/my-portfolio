@@ -41,9 +41,9 @@ const Background = styled.div`
 const Content = styled(Section)`
 	display: flex;
 	min-width: 100%;
-	height: calc(100vh - ${theme.headerHeight});
+	min-height: calc(100vh - ${theme.headerHeight});
 	@media (min-width: 992px) {
-		height: 100vh;
+		min-height: 100vh;
 	}
 `;
 
