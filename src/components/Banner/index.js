@@ -41,7 +41,10 @@ const Background = styled.div`
 const Content = styled(Section)`
 	display: flex;
 	min-width: 100%;
-	min-height: 100vh;
+	height: calc(100vh - ${theme.headerHeight});
+	@media (min-width: 992px) {
+		height: 100vh;
+	}
 `;
 
 const Text = styled.p`
